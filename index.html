@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <!-- SEO On-Page: Reloj de Tenis / Tennis Watch -->
+    <title>Reloj de Tenis | Tennis Watch Automático con Mecanismo de Tanteador</title>
+    <meta name="description" content="Reloj de tenis (Tennis Watch) mecánico con complicación asimétrica para llevar el tanteador de un partido. Mecanismo de bisel indexado patentado.">
+    <meta name="keywords" content="Reloj de Tenis, Tennis Watch, mecanismo reloj de tenis, complicación mecánica tenis, tanteador de tenis mecánico, L'ŒUF ALL">
+    <meta name="author" content="Fran Llambí">
+
+    <!-- Open Graph (Redes Sociales) -->
+    <meta property="og:title" content="Reloj de Tenis | Tennis Watch Automático">
+    <meta property="og:description" content="Reloj de tenis (Tennis Watch) mecánico con complicación asimétrica para llevar el tanteador de un partido. Edición limitada a 2 piezas.">
+    <meta property="og:image" content="https://thetenniswatch.com/Reloj.png">
+    <meta property="og:url" content="https://thetenniswatch.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Preload de Assets Críticos -->
+    <link rel="preload" as="image" href="Reloj.png">
+    <link rel="preload" as="image" href="Bezel.png">
+
+    <!-- Canonical y Hreflang -->
+    <link rel="canonical" href="https://thetenniswatch.com/">
+    <link rel="alternate" hreflang="es" href="https://thetenniswatch.com/">
+    <link rel="alternate" hreflang="en" href="https://thetenniswatch.com/?lang=en">
+    <link rel="alternate" hreflang="x-default" href="https://thetenniswatch.com/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #ffffff; 
+            --text-main: #000000; 
+            --text-muted: #666666; 
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            min-height: 100vh;
+        }
+
+        @media (min-width: 993px) {
+            body, html {
+                height: 150vh;
+            }
+        }
+
+        h1 { 
+            font-size: 0.6em; 
+            color: var(--text-muted); 
+            text-transform: uppercase; 
+            letter-spacing: 0.05em; 
+            margin: 0 0 5px 0; 
+            font-weight: 500; 
+        }
+        
+        h2, h3 { font-weight: 600; margin: 0 0 10px 0; letter-spacing: -0.02em; }
+        
+        p { font-size: 0.8rem; line-height: 1.5; color: var(--text-muted); margin-bottom: 15px; }
+
+        .subtitle-ltd {
+            display: block; font-size: 0.45em; color: var(--text-muted); 
+            margin-top: 5px; font-weight: normal; line-height: 1.4;
+        }
+
+        /* --- ESTILOS DEL ACORDEÓN --- */
+        .accordion-wrapper {
+            margin-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .accordion-btn {
+            background: none; border: none; width: 100%; text-align: left;
+            padding: 15px 0; font-family: inherit; font-size: 0.65rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.1em; cursor: pointer; color: var(--text-main);
+            display: flex; justify-content: space-between; align-items: center;
+            transition: color 0.3s;
+        }
+        
+        .accordion-btn:hover { color: var(--text-muted); }
+
+        .accordion-content {
+            max-height: 0; overflow: hidden; opacity: 0;
+            transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+        }
+
+        .accordion-content.open {
+            max-height: 400px; opacity: 1; padding-bottom: 15px;
+        }
+
+        .tech-specs { font-size: 0.65rem; line-height: 1.4; color: var(--text-muted); margin-bottom: 10px; }
+        .patent-notice { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
+
+        .cta-button {
+            display: inline-block; margin-top: 25px; padding: 12px 24px;
+            background-color: #000; color: #fff; text-decoration: none;
+            font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;
+            font-weight: 600; transition: background-color 0.3s ease;
+            align-self: flex-start;
+        }
+        
+        .cta-button:hover { background-color: #333; }
+
+        .layout-grid {
+            display: grid; grid-template-columns: 2fr 5fr 2fr; 
+            position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+            padding: 40px; box-sizing: border-box; 
+        }
+
+        .top-nav {
+            position: absolute; top: 40px; left: 40px; right: 40px;
+            display: flex; justify-content: space-between; font-size: 0.85rem;
+            text-transform: uppercase; letter-spacing: 0.1em; z-index: 100; color: #000;
+            font-weight: 600;
+        }
+
+        .lang-selector { display: flex; gap: 10px; }
+        .lang-selector span { cursor: pointer; transition: color 0.3s; color: var(--text-muted); }
+        .lang-selector span.active { color: var(--text-main); font-weight: 700; }
+
+        .col-left { display: flex; flex-direction: column; justify-content: center; z-index: 10; }
+        .col-right { display: flex; flex-direction: column; justify-content: center; align-items: flex-end; z-index: 10; }
+        .col-center { display: flex; justify-content: center; align-items: center; position: relative; height: 100%; }
+
+        .watch-wrapper {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 550px; height: 750px;
+            transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+            transform-origin: 40% 30%; z-index: 5;
+        }
+
+        .watch-wrapper.zoomed { transform: translate(-50%, -50%) scale(2.5); }
+
+        .watch-layer {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-size: contain; background-repeat: no-repeat; background-position: center;
+        }
+
+        .layer-case-dial { background-image: url('Reloj.png'); z-index: 1; }
+        .layer-bezel {
+            background-image: url('Bezel.png'); z-index: 2;
+            /* La transición se aplica dinámicamente mediante JavaScript */
+            transform: rotate(0deg); transform-origin: center;
+        }
+
+        /* --- SCORE SIMULATOR DEFAULT (DESKTOP) --- */
+        .score-interactive { text-align: right; width: 100%; max-width: 280px; }
+        .score-interactive h3 { font-size: 0.85rem; margin-bottom: 5px; text-transform: uppercase; color: #000;}
+        
+        .mobile-dropdown-wrapper { position: relative; width: 100%; }
+        .score-dropdown-toggle { display: none; }
+
+        .score-list {
+            display: flex; flex-direction: column; gap: 8px; max-height: 45vh;
+            overflow-y: auto; padding-right: 10px; border-top: 1px solid #e0e0e0; padding-top: 15px;
+        }
+        .score-list::-webkit-scrollbar { width: 4px; }
+        .score-list::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+
+        .score-btn {
+            background: none; border: none; font-family: inherit; font-size: 0.75rem;
+            color: var(--text-muted); text-align: right; cursor: pointer; padding: 4px 0;
+            transition: color 0.3s ease; display: flex; justify-content: flex-end; gap: 15px;
+        }
+        .score-btn span.in { font-weight: bold; width: 30px; }
+        .score-btn span.out { width: 30px; }
+        .score-btn:hover, .score-btn.active { color: var(--text-main); font-weight: 600; }
+
+        .scroll-indicator {
+            position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+            display: flex; flex-direction: column; align-items: center; gap: 10px;
+            font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;
+            opacity: 1; transition: opacity 0.5s ease; color: #000;
+        }
+        .scroll-indicator.hidden { opacity: 0; pointer-events: none; }
+        .mouse-icon { width: 20px; height: 30px; border: 1px solid #000; border-radius: 10px; position: relative; }
+        .mouse-wheel {
+            width: 2px; height: 6px; background-color: #000; position: absolute;
+            top: 5px; left: 50%; transform: translateX(-50%); border-radius: 2px;
+            animation: scrollWheel 1.5s infinite;
+        }
+        @keyframes scrollWheel { 0% { top: 5px; opacity: 1; } 100% { top: 15px; opacity: 0; } }
+
+        /* --- ADAPTACIÓN RESPONSIVE (MÓVILES) --- */
+        @media (max-width: 992px) {
+            body, html { height: auto; overflow-y: auto; }
+            .layout-grid {
+                display: flex; flex-direction: column; position: relative;
+                height: auto; padding: 20px; padding-top: 80px;
+            }
+            .top-nav {
+                position: fixed; top: 0; left: 0; right: 0; padding: 20px;
+                background: rgba(255,255,255,0.95); backdrop-filter: blur(5px);
+            }
+            .col-left { text-align: left; }
+            .cta-button { align-self: stretch; text-align: center; }
+            .col-center { margin: 60px 0; height: 450px; z-index: 5; }
+            
+            .watch-wrapper {
+                position: relative; top: 0; left: 0; transform: none;
+                width: 100%; max-width: 350px; height: 100%; margin: 0 auto;
+                transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+                transform-origin: center center;
+            }
+            .watch-wrapper.zoomed { transform: none; } 
+            
+            .watch-wrapper.zoomed-mobile {
+                transform: scale(1.6) translateY(-5%);
+            }
+            
+            .col-right { align-items: stretch; margin-bottom: 40px; z-index: 20; }
+            .score-interactive { text-align: center; max-width: 100%; position: relative; }
+            
+            .score-dropdown-toggle {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                background: #000; 
+                color: #fff;
+                border: none;
+                padding: 15px 20px;
+                font-family: inherit;
+                font-size: 0.9rem;
+                font-weight: 600;
+                cursor: pointer;
+                z-index: 30;
+                position: relative;
+            }
+            
+            .score-list { 
+                position: absolute;
+                bottom: 100%; 
+                left: 0;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.98);
+                border: 1px solid #000;
+                border-bottom: none;
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                padding: 0;
+                margin: 0;
+                transition: max-height 0.4s ease, opacity 0.4s ease;
+                z-index: 25;
+                flex-direction: column;
+                border-top: none;
+            }
+            .score-list.open {
+                max-height: 250px;
+                opacity: 1;
+                overflow-y: auto;
+                border-top: 1px solid #000;
+            }
+            .score-btn { 
+                justify-content: center; 
+                width: 100%; 
+                font-size: 1rem; 
+                padding: 12px 0; 
+                border-bottom: 1px solid #eee; 
+                color: #666;
+            }
+            .score-btn:hover, .score-btn.active {
+                color: #000;
+                font-weight: 700;
+                background-color: #f9f9f9;
+            }
+            .scroll-indicator { display: none; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Product",
+          "@id": "https://thetenniswatch.com/#product",
+          "name": "Reloj de Tenis L'ŒUF ALL (Tennis Watch)",
+          "image": "https://thetenniswatch.com/Reloj.png",
+          "description": "Reloj de tenis (Tennis Watch) herramienta puramente mecánico. Integra una complicación geométrica asimétrica para llevar el tanteador mediante la rotación indexada del bisel.",
+          "brand": {
+            "@type": "Brand",
+            "name": "L'ŒUF ALL"
+          },
+          "category": "Reloj de Tenis / Tennis Watch",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/LimitedAvailability",
+            "description": "THE TENNIS WATCH."
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://thetenniswatch.com/#author",
+          "name": "Fran Llambí",
+          "jobTitle": "Diseñador & Autor",
+          "knowsAbout": [
+            "Reloj de Tenis",
+            "Tennis Watch",
+            "Mecanismo de Relojería",
+            "Complicación Mecánica de Tanteador"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué es un reloj de tenis (Tennis Watch)?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Un reloj de tenis (Tennis Watch) es una pieza de alta relojería mecánica diseñada para llevar el tanteador de un partido de tenis de forma precisa mediante una complicación específica integrada en su dial y bisel."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuál es el mejor reloj de tenis?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hay muchos relojes inspirados en el deporte del Tenis. El único reloj que tiene la capacidad mecánica para llevar el tanteador de un Game es L'ŒUF ALL - THE TENNIS WATCH."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cómo funciona el mecanismo de tanteador mecánico?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El mecanismo opera relacionando dos capas: el bisel exterior giratorio registra los puntos del jugador (Points In), mientras que el dial fijo interno muestra los puntos del contrincante (Points Out). La rotación del bisel alinea las posiciones exactas para marcar 00, 15, 30, 40 y ventaja (AD)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué innovación resuelve la complicación de este mecanismo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Su innovación radica en romper la simetría paramétrica convencional mediante una regla geométrica asimétrica amparada bajo patente pendiente, lo que evita el solapamiento óptico y permite una lectura instantánea e unívoca de la puntuación."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="layout-grid">
+        <nav class="top-nav">
+            <div class="logo">L'ŒUF ALL</div>
+            <div class="lang-selector">
+                <span id="btn-esp" class="active">ESP</span> | <span id="btn-eng">ENG</span>
+            </div>
+        </nav>
+
+        <div class="col-left">
+            <h1 id="t-h1">Reloj de Tenis</h1>
+            <h2>
+                L'ŒUF ALL<br>Automatique<br>
+                <span class="subtitle-ltd" id="t-ltd">Producción mundial estrictamente limitada a 2 piezas.<br>Mostrando Variante 1/2.</span>
+            </h2>
+            <p id="t-p1">Un reloj herramienta puramente mecánico, estructurado bajo una regla geométrica asimétrica que garantiza una lectura indexada unívoca. Su diseño quiebra la simetría paramétrica, permitiendo llevar el tanteador de un partido de tenis de forma precisa sin solapamientos ópticos.</p>
+            
+            <div class="accordion-wrapper">
+                <button class="accordion-btn" id="acc-btn">+ <span id="t-acc-text">ESPECIFICACIONES</span></button>
+                <div class="accordion-content" id="acc-content">
+                    <div class="tech-specs" id="t-specs">
+                        <strong>Arquitectura Base:</strong> El foco de esta pieza reside en su complicación matemática. El mecanismo de indexación está construido sobre un calibre automático de 40mm de diámetro, con resistencia al agua de 100 metros y brazalete de acero.
+                    </div>
+                    <div class="patent-notice" id="t-pat">Conjunto modular de bisel indexado y dial indicador relacional. <br><strong>Mecanismo amparado bajo patente ingresada, en estado pendiente.</strong></div>
+                </div>
+            </div>
+
+            <a href="mailto:inquiries@loeufall.com" class="cta-button" id="t-cta">Consultas Privadas</a>
+        </div>
+
+        <div class="col-center">
+    	    <div class="watch-wrapper" id="watchWrapper">
+       	        <div class="watch-layer layer-case-dial" id="dialLayer" role="img" aria-label="Reloj de Tenis L'ŒUF ALL - Dial y caja de acero"></div>
+                <div class="watch-layer layer-bezel" id="bezelLayer" role="img" aria-label="Bisel giratorio con marcador de puntos de tenis"></div>
+            </div>
+        </div>
+
+        <div class="col-right">
+            <div class="score-interactive">
+                <h3 id="t-sim-title">Simulador de Juego</h3>
+                <p id="t-p2" style="font-size: 0.65rem; margin-bottom: 15px;">El bisel exterior refleja los puntos del jugador (Points In), mientras que el dial indicador fijo interno lleva los puntos del contrincante (Points Out).</p>
+                
+                <div class="mobile-dropdown-wrapper">
+                    <button class="score-dropdown-toggle" id="scoreDropdownToggle">
+                        <span id="currentScoreDisplay">00 - 00</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="score-list" id="scoreList"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator" id="scrollIndicator">
+            <div class="mouse-icon"><div class="mouse-wheel"></div></div>
+            <span id="t-scroll">Scroll para detalle</span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- LÓGICA DE ACORDEÓN ---
+            const accBtn = document.getElementById('acc-btn');
+            const accContent = document.getElementById('acc-content');
+            let isAccOpen = false;
+
+            accBtn.addEventListener('click', () => {
+                isAccOpen = !isAccOpen;
+                const currentLang = document.getElementById('btn-esp').classList.contains('active') ? 'esp' : 'eng';
+                
+                if (isAccOpen) {
+                    accContent.classList.add('open');
+                    document.getElementById('t-acc-text').innerText = i18n[currentLang].accClose;
+                    accBtn.innerHTML = `- <span id="t-acc-text">${i18n[currentLang].accClose}</span>`;
+                } else {
+                    accContent.classList.remove('open');
+                    document.getElementById('t-acc-text').innerText = i18n[currentLang].accOpen;
+                    accBtn.innerHTML = `+ <span id="t-acc-text">${i18n[currentLang].accOpen}</span>`;
+                }
+            });
+
+            // --- LÓGICA DE SCROLL ZOOM (DESKTOP) ---
+            const watchWrapper = document.getElementById('watchWrapper');
+            const scrollIndicator = document.getElementById('scrollIndicator');
+            
+            window.addEventListener('scroll', () => {
+                if (window.innerWidth > 992) {
+                    if (window.scrollY > 30) {
+                        watchWrapper.classList.add('zoomed');
+                        scrollIndicator.classList.add('hidden');
+                    } else {
+                        watchWrapper.classList.remove('zoomed');
+                        scrollIndicator.classList.remove('hidden');
+                    }
+                }
+            });
+
+            // --- LÓGICA DE DESPLEGABLE Y ZOOM (MOBILE) ---
+            const scoreDropdownToggle = document.getElementById('scoreDropdownToggle');
+            const scoreListContainer = document.getElementById('scoreList');
+            const currentScoreDisplay = document.getElementById('currentScoreDisplay');
+            
+            scoreDropdownToggle.addEventListener('click', () => {
+                scoreListContainer.classList.toggle('open');
+                const arrow = scoreDropdownToggle.querySelector('.arrow');
+                if (scoreListContainer.classList.contains('open')) {
+                    arrow.innerText = '▲';
+                    if (window.innerWidth <= 992) {
+                        watchWrapper.classList.add('zoomed-mobile');
+                    }
+                } else {
+                    arrow.innerText = '▼';
+                }
+            });
+
+            // --- LÓGICA DE ROTACIÓN UNIDIRECCIONAL Y TIEMPO DINÁMICO ---
+            const dialAngles = { '00': 0, '15': -12, '30': -24, '40': -36, 'AD': -48 };
+            const bezelAngles = { '00': 0, '15': 90, '30': 180, '40': 240, 'AD': 300 };
+            const bezelLayer = document.getElementById('bezelLayer');
+            let currentRotation = 0;
+
+            const customScores = [
+                ['00', '00'], ['00', '15'], ['00', '30'], ['00', '40'],
+                ['15', '00'], ['15', '15'], ['15', '30'], ['15', '40'],
+                ['30', '00'], ['30', '15'], ['30', '30'], ['30', '40'],
+                ['40', '00'], ['40', '15'], ['40', '30'], ['40', '40'],
+                ['40', 'AD'], ['AD', '40'], ['AD', 'AD']
+            ];
+
+            customScores.forEach(scorePair => {
+                const pointIn = scorePair[0];
+                const pointOut = scorePair[1];
+                
+                const btn = document.createElement('button');
+                btn.className = 'score-btn';
+                btn.innerHTML = `<span class="in">${pointIn}</span> - <span class="out">${pointOut}</span>`;
+                
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.score-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    if (currentScoreDisplay) {
+                        currentScoreDisplay.innerText = `${pointIn} - ${pointOut}`;
+                    }
+                    scoreListContainer.classList.remove('open');
+                    const arrow = scoreDropdownToggle.querySelector('.arrow');
+                    if(arrow) arrow.innerText = '▼';
+
+                    if (window.innerWidth <= 992) {
+                        watchWrapper.classList.add('zoomed-mobile');
+                    } else if (!watchWrapper.classList.contains('zoomed')) {
+                        window.scrollTo({ top: 100, behavior: 'smooth' });
+                    }
+
+                    let targetRotation = dialAngles[pointOut] - bezelAngles[pointIn];
+                    let diff = (targetRotation - currentRotation) % 360;
+                    
+                    // Forzar sentido antihorario
+                    if (diff > 0) {
+                        diff -= 360;
+                    }
+
+                    // Grados absolutos a recorrer
+                    const degreesToRotate = Math.abs(diff);
+
+                    // CALCULO DINÁMICO DEL TIEMPO:
+                    // Base física de 0.35s + 0.0035s por grado.
+                    // Ejemplos aproximados:
+                    // 12° -> ~0.39s
+                    // 90° -> ~0.67s
+                    // 180° -> ~0.98s
+                    // 360° -> ~1.61s
+                    const duration = degreesToRotate === 0 ? 0 : 0.90 + (degreesToRotate * 0.0090);
+
+                    // Se asigna la duración de la transición dinámicamente según la distancia
+                    bezelLayer.style.transition = `transform ${duration.toFixed(2)}s cubic-bezier(0.25, 1, 0.5, 1)`;
+
+                    currentRotation += diff;
+                    bezelLayer.style.transform = `rotate(${currentRotation}deg)`;
+                });
+                scoreListContainer.appendChild(btn);
+            });
+
+            const firstBtn = scoreListContainer.querySelector('.score-btn');
+            if (firstBtn) {
+                firstBtn.classList.add('active');
+                currentScoreDisplay.innerText = "00 - 00";
+            }
+
+            // --- LÓGICA DE IDIOMAS ---
+            const i18n = {
+                esp: {
+                    title: "Reloj de Tenis | Tennis Watch Automático con Mecanismo de Tanteador",
+                    h1: "Reloj de Tenis",
+                    ltd: "Producción mundial strictly limitada a 2 piezas.<br>Mostrando Variante 1/2.",
+                    p1: "Un reloj herramienta puramente mecánico, estructurado bajo una regla geométrica asimétrica que garantiza una lectura indexada unívoca. Su diseño quiebra la simetría paramétrica, permitiendo llevar el tanteador de un partido de tenis de forma precisa sin solapamientos ópticos.",
+                    p2: "El bisel exterior refleja los puntos del jugador (Points In), mientras que el dial indicador fijo interno lleva los puntos del contrincante (Points Out).",
+                    specs: "<strong>Arquitectura Base:</strong> El foco de esta pieza reside en su complicación matemática. El mecanismo de indexación está construido sobre un calibre automático de 40mm de diámetro, con resistencia al agua de 100 metros y brazalete de acero.",
+                    pat: "Conjunto modular de bisel indexado y dial indicador relacional. <br><strong>Mecanismo amparado bajo patente ingresada, en estado pendiente.</strong>",
+                    cta: "Consultas Privadas",
+                    simTitle: "Simulador de Juego",
+                    scroll: "Scroll para detalle",
+                    accOpen: "ESPECIFICACIONES",
+                    accClose: "CERRAR"
+                },
+                eng: {
+                    title: "Tennis Watch | Automatic Tennis Scorekeeping Mechanism Watch",
+                    h1: "Tennis Watch",
+                    ltd: "Worldwide production strictly limited to 2 pieces.<br>Showing Variant 1/2.",
+                    p1: "A purely mechanical tool watch, structured under an asymmetric geometric rule that guarantees unambiguous indexed reading. Its design breaks parametric symmetry, allowing for precise scorekeeping of a tennis match without optical overlapping.",
+                    p2: "The outer bezel reflects the player's points (Points In), while the fixed inner indicator dial displays the opponent's points (Points Out).",
+                    specs: "<strong>Base Architecture:</strong> The focus of this piece lies in its mathematical complication. The indexing mechanism is built upon a 40mm automatic caliber, featuring 100 meters of water resistance and a steel bracelet.",
+                    pat: "Modular assembly of indexed bezel and relational indicator dial. <br><strong>Mechanism protected under pending patent application.</strong>",
+                    cta: "Private Inquiries",
+                    simTitle: "Game Simulator",
+                    scroll: "Scroll for details",
+                    accOpen: "SPECIFICATIONS",
+                    accClose: "CLOSE"
+                }
+            };
+
+            const btnEsp = document.getElementById('btn-esp');
+            const btnEng = document.getElementById('btn-eng');
+
+            function setLanguage(lang) {
+                document.title = i18n[lang].title;
+                document.getElementById('t-h1').innerHTML = i18n[lang].h1;
+                document.getElementById('t-ltd').innerHTML = i18n[lang].ltd;
+                document.getElementById('t-p1').innerHTML = i18n[lang].p1;
+                document.getElementById('t-p2').innerHTML = i18n[lang].p2;
+                document.getElementById('t-specs').innerHTML = i18n[lang].specs;
+                document.getElementById('t-pat').innerHTML = i18n[lang].pat;
+                document.getElementById('t-cta').innerHTML = i18n[lang].cta;
+                document.getElementById('t-sim-title').innerHTML = i18n[lang].simTitle;
+                document.getElementById('t-scroll').innerHTML = i18n[lang].scroll;
+                
+                document.getElementById('t-acc-text').innerText = isAccOpen ? i18n[lang].accClose : i18n[lang].accOpen;
+                accBtn.innerHTML = (isAccOpen ? "- " : "+ ") + `<span id="t-acc-text">${isAccOpen ? i18n[lang].accClose : i18n[lang].accOpen}</span>`;
+
+                if(lang === 'esp') {
+                    btnEsp.classList.add('active');
+                    btnEng.classList.remove('active');
+                } else {
+                    btnEng.classList.add('active');
+                    btnEsp.classList.remove('active');
+                }
+            }
+
+            btnEsp.addEventListener('click', () => setLanguage('esp'));
+            btnEng.addEventListener('click', () => setLanguage('eng'));
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('lang') === 'en') {
+                setLanguage('eng');
+            }
+        });
+    </script>
+</body>
+</html>

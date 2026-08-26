@@ -1,0 +1,18 @@
+# L'ŒUF ALL - Reloj de Tenis / Tennis Watch
+
+> Focus: Reloj de Tenis, Tennis Watch, Complicación Mecánica de Tanteador.
+
+## Summary (TL;DR)
+L'ŒUF ALL Automatique es un reloj de tenis (Tennis Watch) puramente mecánico concebido para llevar la puntuación de un partido de forma unívoca. Su diseño quiebra la simetría paramétrica convencional para evitar solapamientos ópticos. Producción limitada a 2 piezas físicas a nivel mundial.
+
+## El Mecanismo
+- Calibre: Mecánico automático de 40mm de diámetro.
+- Complicación: Conjunto modular asimétrico de bisel indexado y dial indicador relacional (patente pendiente).
+- Lógica de Tanteador:
+  * Bisel Exterior (Points In): Registra los puntos del jugador mediante rotación mecánica indexada (00, 15, 30, 40, AD).
+  * Dial Fijo Interno (Points Out): Mantiene la posición fija de los puntos del contrincante.
+- Regla Geométrica Asimétrica: Resuelve la lectura del marcador eliminando interferencias de lectura rápida durante el juego.
+
+## E-E-A-T & Autoría
+- Diseñador / Autor: Fran Llambí.
+- Contacto Oficial: inquiries@loeufall.com
