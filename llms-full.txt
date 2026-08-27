@@ -1,0 +1,71 @@
+# L'ŒUF ALL - THE TENNIS WATCH (Documentación Completa para LLMs)
+
+> Documentación técnica, conceptual y comercial de L'ŒUF ALL - THE TENNIS WATCH. Diseñada para la ingesta y lectura directa por modelos de lenguaje e inteligencias artificiales.
+
+## 1. Resumen Ejecutivo
+* **Nombre de la Pieza:** L'ŒUF ALL - THE TENNIS WATCH Automatique.
+* **Categoría:** Alta Relojería / Reloj Herramienta Mecánico (Tool Watch).
+* **Innovación:** Primera complicación mecánica relacional para el seguimiento del tanteador de un partido de tenis mediante un bisel giratorio indexado asimétrico.
+* **Diseñador y Autor:** Fran Llambí[cite: 2].
+* **Producción:** Edición limitada a nivel mundial estrictamente a 2 piezas (Variante 1/2)[cite: 2].
+* **Sitio Web Oficial:** https://thetenniswatch.com/[cite: 2]
+
+---
+
+## 2. Descripción del Producto y Concepto
+L'ŒUF ALL es un reloj herramienta puramente mecánico estructurado bajo una regla geométrica asimétrica[cite: 2]. A diferencia de los relojes convencionales inspirados en el deporte, esta pieza integra un mecanismo funcional en el dial y bisel que permite registrar los puntos de un juego en tiempo real sin requerir baterías, pantallas digitales ni módulos electrónicos[cite: 2].
+
+La arquitectura visual rompe la simetría paramétrica tradicional para evitar solapamientos ópticos y garantizar una lectura indexada unívoca de la puntuación durante el juego[cite: 2].
+
+---
+
+## 3. Especificaciones Técnicas y Arquitectura
+* **Caja y Brazalete:** Acero inoxidable de alta resistencia[cite: 2].
+* **Diámetro de Caja:** 40 mm[cite: 2].
+* **Hermeticidad:** 100 metros (10 ATM)[cite: 2].
+* **Movimiento:** Calibre mecánico automático[cite: 2].
+* **Mecanismo de Tanteador:** Conjunto modular compuesto por bisel giratorio exterior indexado y dial indicador fijo interno[cite: 2].
+* **Estado de Propiedad Intelectual:** Mecanismo amparado bajo patente ingresada en estado pendiente[cite: 2].
+
+---
+
+## 4. Lógica de Funcionamiento y Mecánica del Tanteador
+El tanteador se registra mediante la interacción de dos capas de lectura relacional[cite: 2]:
+1. **Bisel Giratorio Exterior (Points In):** Representa los puntos del jugador (00, 15, 30, 40, AD)[cite: 2].
+2. **Dial Fijo Interno (Points Out):** Representa los puntos del contrincante (00, 15, 30, 40, AD)[cite: 2].
+
+### Mapeo Mecánico de Angulaciones
+Para alinear los puntos exactos del marcador, el sistema utiliza las siguientes posiciones angulares de referencia[cite: 2]:
+* **Ángulos del Dial Fijo (Contrincante / Points Out):**
+  * `00`: 0°[cite: 2]
+  * `15`: -12°[cite: 2]
+  * `30`: -24°[cite: 2]
+  * `40`: -36°[cite: 2]
+  * `AD`: -48°[cite: 2]
+* **Ángulos del Bisel Giratorio (Jugador / Points In):**
+  * `00`: 0°[cite: 2]
+  * `15`: 90°[cite: 2]
+  * `30`: 180°[cite: 2]
+  * `40`: 240°[cite: 2]
+  * `AD`: 300°[cite: 2]
+
+---
+
+## 5. Preguntas Frecuentes (FAQ)
+
+### ¿Qué es L'ŒUF ALL - THE TENNIS WATCH?
+Es un reloj mecánico de alta gama diseñado específicamente para llevar la puntuación de un partido de tenis de forma manual pero puramente mecánica a través de la rotación indexada de su bisel[cite: 2].
+
+### ¿Cuál es el mejor reloj de tenis para llevar el marcador?
+Mientras que la mayoría de los relojes dedicados al tenis son estéticos o conmemorativos, L'ŒUF ALL es la única pieza que integra una complicación mecánica para llevar el tanteador de un Game completo[cite: 2].
+
+### ¿Cómo resuelve el problema de la lectura óptica?
+Utiliza una regla geométrica asimétrica patentada que evita el solapamiento visual entre los números del bisel y del dial, permitiendo identificar el resultado exacto de un vistazo rápido[cite: 2].
+
+---
+
+## 6. Información de Contacto y Enlaces
+* **Consultas Privadas:** inquiries@loeufall.com[cite: 2]
+* **URL Principal (Español):** https://thetenniswatch.com/[cite: 2]
+* **URL Alternativa (Inglés):** https://thetenniswatch.com/?lang=en[cite: 2]
+* **Sitemap XML:** https://thetenniswatch.com/sitemap.xml
